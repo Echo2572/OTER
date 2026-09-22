@@ -1,6 +1,6 @@
 # OTER: Optimal Transport and Entity-Anchored Evidence Routing for Few-Shot Multimodal Relation Extraction
 
-Official implementation of **OTER **(submitted to **IEEE ICASSP 2027**), a few-shot multimodal relation extraction framework that combines **Optimal Transport Alignment (OTA)** with **Entity-Anchored Text Evidence Routing (EATER)**. OTER aligns global-image and entity-region tokens and adaptively routes evidence from the original text, grounding phrases, and image captions.
+Official implementation of  **OTER ** (submitted to **IEEE ICASSP 2027**), a few-shot multimodal relation extraction framework that combines **Optimal Transport Alignment (OTA)** with **Entity-Anchored Text Evidence Routing (EATER)**. OTER aligns global-image and entity-region tokens and adaptively routes evidence from the original text, grounding phrases, and image captions.
 
 This repository contains the training code and configuration used for the experiments in the paper. The implementation supports two datasets: the MNRE benchmark and FewREL-small.
 
