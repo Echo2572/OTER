@@ -41,6 +41,10 @@ OTER/
 │   ├── img_org/
 │   ├── img_vg/
 │   ├── txt/
+|   |   |—— ours_train.txt
+|   |   |—— phrase_text_train.json
+|   |   |—— mre_train_dict.pth
+|   |   └── ...
 │   └── ours_rel2id.json
 └── FewRel_small/
     ├── image/
@@ -71,6 +75,8 @@ The entity-crop visual evidence follows:
 
 > Chen, X., Zhang, N., Li, L., et al. “Good Visual Guidance Make a Better Extractor: Hierarchical Visual Prefix for Multimodal Entity and Relation Extraction.” *Findings of the Association for Computational Linguistics: NAACL 2022*, 2022, pp. 1607–1618.
 
+The grounding phrases follows widely used: `phrase_text_train.json`, `phrase_text_val.json`, `phrase_text_test.json`
+
 Place the processed MNRE files under `MNRE/` as shown above.
 
 ### FewREL-small
@@ -83,7 +89,7 @@ This repository uses **FewREL-small**, the multimodal subset of FewRel proposed 
 
 > Gong, J. and Eldardiry, H. “Few-Shot Relation Extraction with Hybrid Visual Evidence.” *Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024)*, 2024, pp. 7232–7247.
 
-Because the original FewRel data do not provide the required auxiliary visual modalities, the FewREL-small preparation used in this project supplements the multimodal subset with image captions and entity crops. Captions are generated with vision-language models, and the head/tail entities are grounded in the original images to obtain entity crops. The generated outputs are manually verified, and the preparation does not use relation labels, avoiding label leakage. The supplementary files are available here:
+Because the original FewRel data do not provide the required auxiliary visual modalities, the FewREL-small preparation used in this project supplements the multimodal subset with image captions and entity crops. Captions are generated with vision-language models, and the head/tail entities are grounded in the original images to obtain entity crops. Grounding phrase is dynamically constructed from the original text, picking out phrases related to the entity. The generated outputs are manually verified, and the preparation does not use relation labels, avoiding label leakage. The supplementary files are available here:
 
 [Download the FewRel-small supplementary data](https://1drv.ms/f/c/02848db892a0e8dd/IgCWCeWM4GPsSZUhghpJC2mgAWqhuqlpPWbq_yOTeISf0yc?e=EVNQqs)
 
